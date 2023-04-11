@@ -31,7 +31,7 @@ app.post("/", (req, res) => {
     const MAIL_CHIMP_API_KEY = 'd3493b2c2e3a9b99cb3cb2e6c3e17b01-us8'; // usX = 8
     const API_SERVER = 'us8'; // usX = 8
     const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${audienceID}`;
-    console.log(url);
+
     const options = {
         method: "POST",
         auth: `key:${MAIL_CHIMP_API_KEY}`,
@@ -56,6 +56,10 @@ app.post("/", (req, res) => {
     
     request.write(data);
     request.end();
+})
+
+app.post('/failure', (req, res) => {
+    res.redirect("/");
 })
 
 app.listen(3000, (req, res) => {
