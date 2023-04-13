@@ -62,7 +62,7 @@ app.post('/failure', (req, res) => {
     res.redirect("/");
 })
 
-app.listen(3000, (req, res) => {
-    console.log("Server is running on port 3000");
+app.listen(process.env.PORT || 3000, (req, res) => {
+    console.log(`Server is running on port ${process.env.PORT}`);
     console.log(path.join(__dirname, '/'));
 })
