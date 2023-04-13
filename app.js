@@ -27,9 +27,9 @@ app.post("/", (req, res) => {
             }
         ]
     });
-    const audienceID = '477cf5d990';
-    const MAIL_CHIMP_API_KEY = 'd3493b2c2e3a9b99cb3cb2e6c3e17b01-us8'; // usX = 8
-    const API_SERVER = 'us8'; // usX = 8
+    const audienceID = '12fd01cf68';
+    const MAIL_CHIMP_API_KEY = '1e212dce363847029d8b1289cab1b4af-us12';
+    const API_SERVER = 'us12'; // usX = 12
     const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${audienceID}`;
 
     const options = {
